@@ -1,8 +1,12 @@
 <h1><%= @individual_section.title %></h1>
 
+<img src="<%= @individual_section.media %>">
+
 <p>
   <%= @individual_section.content %>
 </p>
+
+<p><%= link_to "See all articles in this category", health_category_path(@health_category) %></p>
 
 <p><%= link_to "Edit this page", edit_health_category_individual_section_path %></p>
 <p><%= link_to "Delete this page", health_category_individual_section_path(@health_category, @individual_section),

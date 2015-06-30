@@ -1,0 +1,11 @@
+<%= render "layouts/errors", :object => @health_category %>
+
+<%= form_for @health_category do |f| %>
+  <%= f.label :category %>
+  <%= f.text_field :category %>
+  <br>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+  <br>
+  <%= f.submit %>
+<% end %>

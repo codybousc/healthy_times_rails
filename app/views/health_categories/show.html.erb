@@ -2,7 +2,7 @@
 
 <% if @health_category.individual_sections.any? %>
   <% @health_category.individual_sections.each do |section| %>
-    <p><%= link_to section.title, health_category_individual_section_path(@health_category, section) %></p>
+    <h5><%= link_to section.title, health_category_individual_section_path(@health_category, section) %></h5>
   <% end %>
 <% else %>
   <p>
@@ -10,4 +10,8 @@
   </p>
 <% end %>
 
+<br>
 <p><%= link_to "Add an article to Inner Health", new_health_category_individual_section_path(@health_category) %></p>
+<p><%= link_to "See all health categories", health_categories_path %></p>
+
+<p><%= link_to "Edit this category", edit_health_category_path(@health_category) %></p>
