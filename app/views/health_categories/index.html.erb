@@ -1,9 +1,13 @@
-<h1>Inner Health</h1>
+<div id="container">
+  <h1>Inner Health</h1>
 
 
-<% @health_categories.each do |health_category| %>
-<h5><%= link_to health_category.category, health_category_path(health_category) %></h5>
-    <img src="<%= health_category.image_url %>">
-<% end %>
-<br>
-<%= link_to "Add new category", new_health_category_path %>
+  <% @health_categories.each do |health_category| %>
+    <div class="col-md-3">
+      <h5><%= link_to health_category.category, health_category_path(health_category) %></h5>
+      <img src="<%= health_category.image_url %>">
+    </div>
+  <% end %>
+  <br>
+  <%= link_to "Add new category", new_health_category_path %>
+</div>
