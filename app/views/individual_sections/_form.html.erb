@@ -1,0 +1,17 @@
+<%= render "layouts/errors", :object => @individual_section %>
+
+<%= form_for [@health_category, @individual_section] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <br>
+  <%= f.label :media %>
+  <%= f.text_field :media %>
+  <br>
+  <%= f.label :media_description %>
+  <%= f.text_field :media_description %>
+  <br>
+  <%= f.submit %>
+<% end %>

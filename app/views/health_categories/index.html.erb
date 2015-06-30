@@ -1,0 +1,6 @@
+<h1>Find your inner health</h1>
+
+
+<% @health_categories.each do |health_category| %>
+<h5><%= link_to health_category.category, health_category_path(health_category) %></h5>
+<% end %>

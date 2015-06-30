@@ -1,0 +1,13 @@
+<h1><%= @health_category.category %></h1>
+
+<% if @health_category.individual_sections.any? %>
+  <% @health_category.individual_sections.each do |section| %>
+    <p><%= link_to section.title, health_category_individual_section_path(@health_category, section) %></p>
+  <% end %>
+<% else %>
+  <p>
+    There are no articles in this section yet.
+  </p>
+<% end %>
+
+<p><%= link_to "Add an article to Inner Health", new_health_category_individual_section_path(@health_category) %></p>

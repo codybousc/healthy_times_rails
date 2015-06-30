@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150630161641) do
+ActiveRecord::Schema.define(version: 20150630175427) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,11 @@ ActiveRecord::Schema.define(version: 20150630161641) do
   end
 
   create_table "individual_sections", force: :cascade do |t|
-    t.string "title"
-    t.string "content"
-    t.string "media"
-    t.string "media_description"
+    t.string  "title"
+    t.string  "content"
+    t.string  "media"
+    t.string  "media_description"
+    t.integer "health_category_id"
   end
 
 end
